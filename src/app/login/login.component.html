@@ -1,0 +1,11 @@
+<div class="main main_index">
+    <form (ngSubmit)="soumission(fm)" #fm='ngForm' onsubmit="return onSubmit_login()" name="form_login">
+        <label>Identifiant</label>
+        <input name="email" type="text" [(ngModel)]="user.email">
+        <label>Mot de passe</label>
+        <input name="password" type="password" [(ngModel)]="user.password">
+        <p>{{user.email}} - {{user.password}}</p>
+        <button >TEST MAIL</button>
+        <input (click)="test_email()" type="submit" value="envoyer"/>
+        </form>
+</div>
