@@ -1,11 +1,21 @@
 <div class="main main_index">
-    <form (ngSubmit)="soumission(fm)" #fm='ngForm' onsubmit="return onSubmit_login()" name="form_login">
-        <label>Identifiant</label>
-        <input name="email" type="text" [(ngModel)]="user.email">
-        <label>Mot de passe</label>
-        <input name="password" type="password" [(ngModel)]="user.password">
-        <p>{{user.email}} - {{user.password}}</p>
-        <button >TEST MAIL</button>
-        <input (click)="test_email()" type="submit" value="envoyer"/>
+    <section class="section1">
+        <form (ngSubmit)="soumission(fm)" #fm='ngForm' onsubmit="return onSubmit_login()" name="form_login">
+            <div class="margin_bot_20">
+                <label class="margin_right_20">Identifiant</label>
+                <input name="email" type="text" id="truc" [(ngModel)]="user.email">
+            </div>
+            <div class="margin_bot_20">
+                <label class="margin_right_20">Mot de passe</label>
+                <input name="password" type="password" [(ngModel)]="user.password">
+            </div>
+            <div class="margin_bot_20">
+                <p>{{user.email}} - {{user.password}}</p>
+            </div>
+            <div class="margin_bot_20">
+                <button>TEST MAIL</button>
+            </div>
+            <input (click)="test_email()" type="submit" value="envoyer" />
         </form>
+    </section>
 </div>

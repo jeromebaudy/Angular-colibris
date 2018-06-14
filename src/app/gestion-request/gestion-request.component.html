@@ -1,72 +1,18 @@
 <h2>
-    {{ titre }}
-  </h2>
-  <div class="main">
-    <article *ngFor="let s of listReq">
-      <div class="row between avec_align serie">
-        <img class="imgSerie" [src]="requete.lien_image">
-        <div class="divInfo1_search row avec_align">
-          <div>
-            <h3 class="margin_bot_10">
-              {{ requete.titre }}
-            </h3>
-            <p class="margin_bot_10">Auteur : {{ requete.nom_auteur }}
-            </p>
-            <p class="margin_bot_10">Editeur : {{ requete.nom_editeur }}
-            </p>
-            <p>Collection : {{ requete.nom_collection }}
-            </p>
-          </div>
-          <div>
-            <p class="bold margin_bot_10">Propriétaire : </p>
-            <p class="margin_bot_20">Collège {{ requete.college.nom_college }} à {{ requete.college.ville_college }}</p>
-            <p>Temps de parcours : 40 minutes</p>
-          </div>
-        </div>
-        <div class="tailleDivFleche row start avec_align">
-          <img class="svg2" src="assets/img/angle-down.svg">
-        </div>
-      </div>
-      <div class="row margin_top_20 deroule" id="">
-        <div id="action2" class="column start sans_align detailrequete margin_right_20">
-          <div class="margin_bot_20 detailSup">
-            <p class="margin_bot_20">Nombre d'exemplaire : 21 livres</p>
-            <p class="margin_bot_20">Langue : français</p>
-            <p class="margin_bot_10">ISBN : 3787734535</p>
-          </div>
-          <div class="reservation2 detailSup margin_bot_20">
-            <h4 class="margin_bot_20 bold">Réservation(s) validée :</h4>
-            <div>
-              <p class="margin_bot_10">Fardo Gilbert :</p>
-              <p class="margin_bot_10">début: 15/04/2018 / fin: 23/06/2018</p>
-            </div>
-          </div>
-        </div>
-        <form class="column start sans_align max_width" method="POST">
-          <input type="hidden" class="input_date" value="{{requete._id}}" name="id_requete">
-          <div class="row between avec_align max_width padding margin_bot_20 colorWhite selectDate">
-            <div class="row start avec_align mid_width">
-              <label for="from" class="margin_right_20">Date d'emprunt : </label>
-              <input type="date" class="input_date" name="date_debut">
-            </div>
-            <div class="row end avec_align mid_width">
-              <label for="to" class="margin_right_20">Date de retour : </label>
-              <input type="date" class="input_date" name="date_fin">
-            </div>
-  
-          </div>
-          <div class="column avec_align max_width colorWhite">
-            <div class="row max_width avec_align padding">
-              <label class="bold">Envoyer un message :</label>
-            </div>
-            <div class="max_width row center">
-              <textarea name="message"></textarea>
-            </div>
-            <div class="row end avec_align max_width padding">
-              <button class="button btn_2_normal" type="submit">Envoyer la demande</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </article>
-  </div>
+  {{ titre }}
+</h2>
+<div class="main">
+  <article *ngFor="let s of listReq">
+    <div>
+      <h3 class="margin_bot_10">
+        {{ requete.titre }}
+      </h3>
+      <p class="margin_bot_10">Auteur : {{ requete.nom_auteur }}
+      </p>
+      <p class="margin_bot_10">Editeur : {{ requete.nom_editeur }}
+      </p>
+      <p>Collection : {{ requete.nom_collection }}
+      </p>
+    </div>
+  </article>
+</div>
